@@ -5,8 +5,6 @@ const register = mongoose.Schema({
     lastname: { type: String, required: true },
     email: { 
         type: String,  
-        unique: true,  
-        lowercase: true,  
         trim: true 
     },
     password: {  
@@ -14,7 +12,7 @@ const register = mongoose.Schema({
         minlength: 6,  
         required: [true, "Please provide a Password"],  
        },
-    accountType:{type:String,enum:['Shelter','Customer']},
+    accountType:{type:String, enum:['Shelter','Customer']},
     },
 
  { timestamps: true 
